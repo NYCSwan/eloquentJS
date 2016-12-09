@@ -1,0 +1,15 @@
+nav {
+	background-color: gray;
+	text-align: center;
+	color: #fff;
+}
+main {
+	color: navy;
+	width: 90%;
+	height: auto;
+	min-height: 500px;
+}
+footer {
+	background-color: gray;
+	color: #fff;
+}
