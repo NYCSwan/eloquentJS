@@ -2,19 +2,37 @@
 <html>
 <head>
 	<title>Duckett Practice</title>
+    <link rel="stylesheet" href="jquery.css" />
 </head>
 <body>
-	<h1 class="title"></h1>
 	<div id="page">
-		<h1 id="header">List</h1>
-		<h2>Buy Groceries</h2>
+	<nav>
+	  <h1 class="title">Duckett's List</h1>
+      <h2>New Account</h2>
+      <form method="post" action="http://www.example.org/register">
+        <label for="username">Create a username: </label>
+        <input type="text" id="username" onblur="checkUsername()" />
+        <div id="feedback"></div>
+        <label for="password">Create a password: </label>
+        <input type="password" id="password" />
+        <input type="submit" value="sign up" />
+      </form>
+    </nav>
+		<h2 id="list">Buy Groceries <span id="counter"></span></h2>
 		<ul id="shoppingList">
-			<li  id="one"class="complete"><a href="#1">Done</a>figs</li>
-			<li id="two" class="complete"><a href="#2">Done</a>nuts</li>
-			<li id="three" class="complete"><a href="#3">Done</a>honey</li>
-			<li id="four" class="complete"><a href="#4">Done</a>vinegar</li>
+			<li id="one" class="hot"><a href="#1">figs</a></li>
+			<li id="two" class="hot"><a href="#2">nuts</a></li>
+			<li id="three" class="hot"><a href="#3">honey</a></li>
+			<li id="four" class="cold"><a href="#4">vinegar</a></li>
 		</ul>
-		<script type="text/javascript" src="example.js"></script>
+		<div id="newItemButton"><button href="#" id="showForm">new item</button></div>
+      	<form id="newItemForm">
+        	<input type="text" id="itemDescription" placeholder="Add description" />
+        	<input type="submit" id="add" value="add" />
+      	</form>
+
 	</div>
+	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
 </body>
 </html>
